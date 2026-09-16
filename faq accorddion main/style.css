@@ -1,0 +1,165 @@
+/* ===================== RESET ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img { display: block; max-width: 100%; }
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+
+/* ===================== TOKENS ===================== */
+:root {
+  --color-bg: #f7f2ff;         /* light lavender page background */
+  --color-dark: #2b1c46;       /* near-black purple: heading text, minus circle */
+  --color-card: #ffffff;
+  --color-text-muted: #79747e; /* answer paragraph text */
+  --color-border: #ece8f0;
+  --color-accent: #ad28ff;     /* purple: plus circle, hover text */
+
+  --font-body: "Work Sans", sans-serif;
+
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+
+  --radius-md: 16px;
+}
+
+
+/* ===================== BASE / BACKGROUND PATTERN ===================== */
+body {
+  position: relative;
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  min-height: 100vh;
+  padding: var(--space-4);
+  overflow-x: hidden;
+}
+
+/* The picture element holding our responsive background image */
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; /* sits behind everything else on the page */
+}
+
+.bg-pattern img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ===================== CARD ===================== */
+main.card {
+  position: relative; /* so it visually sits on top of the pattern via margin, not z-index tricks */
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto 0; /* pushes the card down so the dark pattern peeks out above it */
+  background-color: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-4);
+  box-shadow: 0 30px 60px rgba(43, 28, 70, 0.15);
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.star-icon {
+  width: 24px;
+  height: 24px;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+
+/* ===================== FAQ ITEMS ===================== */
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  text-align: left;
+}
+
+.faq-question span {
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.faq-question:hover span,
+.faq-question:focus-visible span {
+  color: var(--color-accent);
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.faq-answer {
+  padding-bottom: var(--space-3);
+  padding-right: 40px; /* keeps text from running under the icon column */
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+
+/* ===================== RESPONSIVE ===================== */
+@media (min-width: 768px) {
+  main.card {
+    margin-top: 140px;
+    padding: var(--space-5) var(--space-5) var(--space-5) 56px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .star-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
