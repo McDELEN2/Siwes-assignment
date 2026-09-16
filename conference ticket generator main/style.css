@@ -1,0 +1,236 @@
+/* ===================== RESET ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img { display: block; max-width: 100%; }
+
+input, button {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+
+/* ===================== DESIGN TOKENS ===================== */
+:root {
+  --color-bg: #0a0c1d;
+  --color-surface: #1c1f43;
+  --color-border: #4a4f8f;
+  --color-text: #f7f7ff;
+  --color-text-muted: #b8bde6;
+  --color-accent: #f5a623;
+  --color-error: #ff7676;
+
+  --font-body: "Inconsolata", monospace;
+
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+}
+
+
+/* ===================== BASE ===================== */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.screen {
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.brand {
+  margin-bottom: var(--space-5);
+}
+
+.logo{
+
+  display: flex;
+  justify-content: center;
+}
+
+
+/* ===================== FORM ===================== */
+#ticket-form {
+  text-align: left;
+}
+
+.field {
+  margin-bottom: var(--space-4);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: var(--space-3);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+.upload-box:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.upload-box {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  padding: var(--space-5) var(--space-3);
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-box.drag-over {
+  border-color: var(--color-accent);
+  background-color: var(--color-border);
+}
+
+.upload-box img.preview {
+  max-width: 80px;
+  max-height: 80px;
+  margin: 0 auto var(--space-2);
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.upload-logo{
+  display: flex;
+  justify-content: center;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
+
+.error {
+  font-size: 0.8rem;
+  color: var(--color-error);
+  margin-top: var(--space-2);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: var(--space-3);
+  margin-top: var(--space-2);
+  background-color: var(--color-accent);
+  color: #1a1a1a;
+  font-weight: bold;
+  border-radius: var(--radius-sm);
+  transition: opacity 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus-visible {
+  opacity: 0.85;
+}
+
+
+/* ===================== TICKET SCREEN ===================== */
+.ticket {
+  margin-top: var(--space-5);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  text-align: left;
+}
+
+.ticket__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.ticket__date {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.ticket__attendee {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.ticket__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background-color: var(--color-border);
+}
+
+.ticket__fullname {
+  font-weight: bold;
+}
+
+.ticket__github {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.ticket__number {
+  margin-top: var(--space-4);
+  text-align: right;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.logo img{
+  padding-bottom: 50px;
+}
+
+
+/* ===================== RESPONSIVE ===================== */
+@media (min-width: 640px) {
+  h1 { font-size: 2.25rem; }
+}

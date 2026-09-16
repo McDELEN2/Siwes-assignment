@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding Conf Ticket Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main id="main">
+
+    <!-- ===================== FORM SCREEN ===================== -->
+    <section id="form-screen" class="screen">
+
+      <header class="brand">
+        <div class="logo">
+        <!-- Replace with the Coding Conf logo from the challenge assets -->
+         <img src="assets/images/logo-full.svg" alt="conference-logo" width="180px" title="conference-logo">
+         </div>
+      </header>
+
+      <h1>Your Journey to Coding Conf 2026 Starts Here!</h1>
+      <p class="subtitle">Secure your spot at next year's biggest coding conference.</p>
+
+      <form id="ticket-form" novalidate>
+
+        <!-- AVATAR UPLOAD -->
+        <div class="field">
+          <label for="avatar-input">Upload Avatar</label>
+
+          <div id="upload-box" class="upload-box" tabindex="0" role="button"
+               aria-describedby="avatar-hint avatar-error">
+                <div class="upload-logo">
+         <img src="assets/images/icon-upload.svg" alt="conference-logo" width="80px" title="conference-logo">
+         </div>
+            <p id="upload-instructions">Drag and drop or click to upload</p>
+            <!-- Real file input, visually hidden but reachable by keyboard via the label/box -->
+            <input type="file" id="avatar-input" name="avatar" accept="image/jpeg, image/png" hidden />
+          </div>
+
+          <p id="avatar-hint" class="hint">Upload your photo (JPG or PNG, max size 500KB).</p>
+          <p id="avatar-error" class="error" role="alert" aria-live="polite" hidden></p>
+        </div>
+
+        <!-- FULL NAME -->
+        <div class="field">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="fullName" aria-describedby="full-name-error" />
+          <p id="full-name-error" class="error" role="alert" aria-live="polite" hidden></p>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com"
+                 aria-describedby="email-error" />
+          <p id="email-error" class="error" role="alert" aria-live="polite" hidden></p>
+        </div>
+
+        <!-- GITHUB USERNAME -->
+        <div class="field">
+          <label for="github">GitHub Username</label>
+          <input type="text" id="github" name="github" placeholder="@yourusername"
+                 aria-describedby="github-error" />
+          <p id="github-error" class="error" role="alert" aria-live="polite" hidden></p>
+        </div>
+
+        <button type="submit">Generate My Ticket</button>
+
+      </form>
+
+    </section>
+
+    <!-- ===================== TICKET SCREEN (hidden until valid submit) ===================== -->
+    <section id="ticket-screen" class="screen" hidden>
+
+      <div class="logo">
+         <img src="assets/images/logo-full.svg" alt="conference-logo" width="180px" title="conference-logo">
+         </div>
+
+      <h1>Congrats, <span id="ticket-name">Name</span>! <br /> Your ticket is ready.</h1>
+      <p>We've emailed your ticket to <span id="ticket-email">email</span> and will send updates in the run-up to the event.</p>
+
+      <div class="ticket">
+        <div class="ticket__header">
+          <p class="brand__name">Coding Conf</p>
+          <p class="ticket__date">Jan 31, 2026 / Austin, TX</p>
+        </div>
+
+        <div class="ticket__attendee">
+          <img id="ticket-avatar" src="" alt="" class="ticket__avatar" />
+          <div>
+            <p id="ticket-fullname" class="ticket__fullname"></p>
+            <p id="ticket-github" class="ticket__github"></p>
+          </div>
+        </div>
+
+        <p id="ticket-number" class="ticket__number"></p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Generated tickets ends -->
+  
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
