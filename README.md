@@ -17,10 +17,10 @@ Each project below was built from scratch based on a design brief and is linked 
 
 | # | Project | Description | Live Demo | Repository |
 |---|---------|-------------|-----------|-------------|
-| 1 | **Conference Ticket Generator** | A form-validation project featuring file upload and accessibility support, letting users generate a personalized conference ticket. | [View Live](https://mcdelen2.github.io/Siwes-assignment/conference%20ticket%20generator%20main) | [View Code]() |
-| 2 | **Contact Form** | An accessible contact form built with proper validation and screen reader support. | [View Live](https://mcdelen2.github.io/Siwes-assignment/contact%20form) | [View Code](#) |
-| 3 | **FAQ Accordion** | An accessible, keyboard-navigable FAQ accordion — a common UI pattern for JavaScript and accessibility practice. | [View Live](https://mcdelen2.github.io/Siwes-assignment/faq%20accorddion%20main) | [View Code]() |
-| 4 | **News Homepage** | A responsive news homepage built with CSS Grid and semantic HTML. | [View Live](https://mcdelen2.github.io/Siwes-assignment/news%20homepage%20main) | [View Code]() |
+| 1 | **Conference Ticket Generator** | A form-validation project featuring file upload and accessibility support, letting users generate a personalized conference ticket. | [View Live](https://mcdelen2.github.io/Siwes-assignment/conference%20ticket%20generator%20main) | [View Code](https://github.com/McDELEN2/Siwes-assignment/tree/main/conference%20ticket%20generator%20main) |
+| 2 | **Contact Form** | An accessible contact form built with proper validation and screen reader support. | [View Live](https://mcdelen2.github.io/Siwes-assignment/contact%20form) | [View Code](https://github.com/McDELEN2/Siwes-assignment/tree/main/contact%20form) |
+| 3 | **FAQ Accordion** | An accessible, keyboard-navigable FAQ accordion — a common UI pattern for JavaScript and accessibility practice. | [View Live](https://mcdelen2.github.io/Siwes-assignment/faq%20accorddion%20main) | [View Code](https://github.com/McDELEN2/Siwes-assignment/tree/main/faq%20accorddion%20main) |
+| 4 | **News Homepage** | A responsive news homepage built with CSS Grid and semantic HTML. | [View Live](https://mcdelen2.github.io/Siwes-assignment/news%20homepage%20main) | [View Code](https://github.com/McDELEN2/Siwes-assignment/tree/main/news%20homepage%20main) |
 
 > **Note:** Replace the `#` placeholders above with your actual GitHub repository and live demo (e.g. GitHub Pages, Netlify, Vercel) links for each project.
 
