@@ -1,0 +1,315 @@
+/* ===================== RESET ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img { display: block; max-width: 100%; }
+
+ul { list-style: none; }
+
+a { text-decoration: none; color: inherit; }
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Visually hides text but keeps it available to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+
+/* ===================== TOKENS ===================== */
+:root {
+  --color-bg: #fffaf5;
+  --color-dark: #00001a;
+  --color-text-muted: #5e607b;
+  --color-red: #f15d51;
+  --color-orange: #eab459;
+  --color-line: #e6e3e1;
+
+  --font-body: "Inter", sans-serif;
+
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+
+  --max-width: 1150px;
+}
+
+
+/* ===================== BASE ===================== */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4) var(--space-6);
+}
+
+h1, h2, h3 {
+  color: var(--color-dark);
+  line-height: 1.1;
+}
+
+
+/* ===================== HEADER / NAV ===================== */
+.site-header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-4);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-dark);
+}
+
+.nav-desktop ul {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.nav-desktop a {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.nav-desktop a:hover,
+.nav-desktop a:focus-visible {
+  color: var(--color-red);
+}
+
+.nav-toggle {
+  display: none; /* shown only on mobile, see media query below */
+}
+
+
+/* ===================== MOBILE NAV OVERLAY ===================== */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background-color: rgba(0, 0, 26, 0.5); /* dark tint over the page content behind it */
+}
+
+.mobile-nav nav {
+  margin-left: auto;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background-color: var(--color-bg);
+  padding: 110px var(--space-4) var(--space-4);
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.mobile-nav a {
+  color: var(--color-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a:focus-visible {
+  color: var(--color-red);
+}
+
+
+/* ===================== HERO GRID (image + New panel) ===================== */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+
+.new-panel {
+  background-color: var(--color-dark);
+  padding: var(--space-4);
+}
+
+.new-panel h2 {
+  color: var(--color-orange);
+  font-size: 2rem;
+  margin-bottom: var(--space-4);
+}
+
+.new-panel article {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.new-panel article:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.new-panel article:first-child {
+  padding-top: 0;
+}
+
+.new-panel h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2);
+}
+
+.new-panel h3 a {
+  color: #ffffff;
+}
+
+.new-panel h3 a:hover,
+.new-panel h3 a:focus-visible {
+  color: var(--color-orange);
+}
+
+.new-panel p {
+  color: #b0b0c3;
+  font-size: 0.9rem;
+}
+
+
+/* ===================== INTRO (heading + paragraph + button) ===================== */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.intro-grid h1 {
+  font-size: 2.5rem;
+}
+
+.intro-body p {
+  margin-bottom: var(--space-4);
+}
+
+.btn-read-more {
+  display: inline-block;
+  background-color: var(--color-red);
+  color: var(--color-bg);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: var(--space-3) var(--space-5);
+}
+
+.btn-read-more:hover,
+.btn-read-more:focus-visible {
+  background-color: var(--color-dark);
+}
+
+
+/* ===================== TRENDING ===================== */
+.trending {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+.trending-item {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.trending-item img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.trending-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-red);
+  margin-bottom: var(--space-2);
+}
+
+.trending-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2);
+}
+
+.trending-item h3 a:hover,
+.trending-item h3 a:focus-visible {
+  color: var(--color-red);
+}
+
+.trending-item p {
+  font-size: 0.9rem;
+}
+
+
+/* ===================== RESPONSIVE: DESKTOP ===================== */
+@media (min-width: 900px) {
+  .nav-desktop {
+    display: block;
+  }
+
+  .hero-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+
+  .trending {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .trending-item img {
+    width: 100px;
+    height: 100%;
+  }
+}
+
+/* ===================== RESPONSIVE: MOBILE ===================== */
+@media (max-width: 899px) {
+  .nav-desktop {
+    display: none; /* replaced by the hamburger + overlay */
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .intro-grid h1 {
+    font-size: 2rem;
+  }
+}
