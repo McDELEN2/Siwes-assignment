@@ -1,4 +1,4 @@
-# SIWES Training Projects — Ogunbona Adedeji
+# SIWES Training Projects: Ogunbona Adedeji
 
 ## About Me
 
@@ -13,7 +13,7 @@
 
 ## Introduction
 
-This repository showcases the front-end development projects completed during my Students Industrial Work Experience Scheme (SIWES) placement at **EDTECH COE**. As part of the training, I was assigned four practical front-end challenges designed to build and demonstrate my skills in HTML, CSS, and JavaScript — covering form handling, accessibility, interactive UI components, and responsive layout design.
+This repository showcases the front-end development projects completed during my Students Industrial Work Experience Scheme (SIWES) placement at **EDTECH COE**. As part of the training, I was assigned four practical front-end challenges designed to build and demonstrate my skills in HTML, CSS, and JavaScript covering form handling, accessibility, interactive UI components, and responsive layout design.
 
 Each project below was built from scratch based on a design brief and is linked to its live demo and source code for easy review.
 
